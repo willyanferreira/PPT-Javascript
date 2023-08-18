@@ -14,44 +14,30 @@
 
 <body>
     <main>
+        <h1>Pedra Papel Tesoura</h1>
         <section id="areaDoUsuario">
-            <h1>Escolha sua opção</h1>
-            <section class="options">
-                <label for="pedra">
-                    <input type="radio" id="pedra" name="ppt" value="pedra">
-                    <i class="fa-regular fa-hand-back-fist"></i>
-                </label>
-                <label for="papel">
-                    <input type="radio" id="papel" name="ppt" value="papel">
-                    <i class="fa-regular fa-hand"></i>
-                </label>
-                <label for="tesoura">
-                    <input type="radio" id="tesoura" name="ppt" value="tesoura">
-                    <i class="fa-regular fa-hand-scissors"></i>
-                </label>
-            </section>
-            <button type="button" id="iniciarPartida">Jogar</button>
+            <h2>Escolha sua opção</h2>
+                <section class="options">
+                    <label for="pedra">
+                        <input type="radio" id="pedra" name="ppt" value="pedra" required>
+                        <i class="fa-regular fa-hand-back-fist"></i>
+                    </label>
+                    <label for="papel">
+                        <input type="radio" id="papel" name="ppt" value="papel" required>
+                        <i class="fa-regular fa-hand"></i>
+                    </label>
+                    <label for="tesoura">
+                        <input type="radio" id="tesoura" name="ppt" value="tesoura" required>
+                        <i class="fa-regular fa-hand-scissors"></i>
+                    </label>
+                </section>
+                <button type="button" id="iniciarPartida">Jogar</button>
         </section>
+        <section id="exibirResultado"></section>
         <section id="escolhaDaMaquina">
+            <h2>Escolha da máquina</h2>
             <section>
-                <!-- <i class="fa-regular fa-hand-back-fist"></i> -->
             </section>
-        </section>
-        <section id="areaDaMaquina">
-            <h1>Escolha da máquina</h1>
-            <section class="options">
-                <label for="">
-                    <input type="radio" id="pedra" name="ppt" value="pedra">
-                    <i class="fa-regular fa-hand-back-fist"></i>
-                </label>
-                <label for="">
-                    <input type="radio" id="papel" name="ppt" value="papel">
-                    <i class="fa-regular fa-hand"></i>
-                </label>
-                <label for="">
-                    <input type="radio" id="tesoura" name="ppt" value="tesoura">
-                    <i class="fa-regular fa-hand-scissors"></i>
-                </label>
         </section>
     </main>
 </body>
