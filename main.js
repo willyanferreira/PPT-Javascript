@@ -1,4 +1,4 @@
-const opcoesDaMaquina = ['fa-regular fa-hand-back-fist', 'fa-regular fa-hand', 'fa-regular fa-hand-scissors']
+const opcoesDaMaquina = ['fa-regular fa-hand-back-fist pedra', 'fa-regular fa-hand papel', 'fa-regular fa-hand-scissors tesoura']
 
 function definirEsolhaDaMaquina(){
     document.querySelector('#escolhaDaMaquina section').innerHTML = `<i class="${opcoesDaMaquina[Math.floor((Math.random() * 3))]}"></i>`
@@ -8,34 +8,29 @@ let opacaoEscolhidaDoUsuario = '';
 
 let opcaoEscolhidaDaMaquina = '';
 
+const regrasDoJogo = {
+    pedra: 'tesoura',
+    papel: 'pedra',
+    tesoura: 'papel'
+};
+
 const exibirResultado = document.querySelector('#exibirResultado');
 function resultadoDaPartida(){
-    opcaoEscolhidaDaMaquina = document.querySelector('#escolhaDaMaquina section i').classList[1];
-    // console.log(opcaoEscolhidaDaMaquina);
+    opcaoEscolhidaDaMaquina = document.querySelector('#escolhaDaMaquina section i').classList[2];
+    // console.log(`Escolha da máquina ${opcaoEscolhidaDaMaquina}`);
     // console.log(opacaoEscolhidaDoUsuario);
 
-    if(opacaoEscolhidaDoUsuario == 'pedra' && opcaoEscolhidaDaMaquina == 'fa-hand-back-fist'){
+    if(opacaoEscolhidaDoUsuario === opcaoEscolhidaDaMaquina){
         exibirResultado.innerHTML = `<h3 class="empate">Empate</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'papel' && opcaoEscolhidaDaMaquina == 'fa-hand'){
-        exibirResultado.innerHTML = `<h3 class="empate">Empate</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'tesoura' && opcaoEscolhidaDaMaquina == 'fa-hand-scissors'){
-        exibirResultado.innerHTML = `<h3 class="empate">Empate</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'pedra' && opcaoEscolhidaDaMaquina == 'fa-hand-scissors'){
+    }else if(regrasDoJogo[opacaoEscolhidaDoUsuario] === opcaoEscolhidaDaMaquina){
         exibirResultado.innerHTML = `<h3 class="vitoria">Você venceu</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'papel' && opcaoEscolhidaDaMaquina == 'fa-hand-back-fist'){
-        exibirResultado.innerHTML = `<h3 class="vitoria">Você venceu</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'tesoura' && opcaoEscolhidaDaMaquina == 'fa-hand'){
-        exibirResultado.innerHTML = `<h3 class="vitoria">Você venceu</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'pedra' && opcaoEscolhidaDaMaquina == 'fa-hand'){
-        exibirResultado.innerHTML = `<h3 class="derrota">Você perdeu</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'papel' && opcaoEscolhidaDaMaquina == 'fa-hand-scissors'){
-        exibirResultado.innerHTML = `<h3 class="derrota">Você perdeu</h3>`;
-    }else if(opacaoEscolhidaDoUsuario == 'tesoura' && opcaoEscolhidaDaMaquina == 'fa-hand-back-fist'){
+    }else{
         exibirResultado.innerHTML = `<h3 class="derrota">Você perdeu</h3>`;
     }
 }
 
 function partida(){
+    exibirResultado.innerHTML = '';
     const escolhaDoUsuario = document.querySelectorAll('input');
     // console.log(escolhaDoUsuario);
 
