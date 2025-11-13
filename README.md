@@ -1,6 +1,6 @@
 # 🕹️ Pedra, Papel, Tesoura, Lagarto, Spock
 ## 📖 Visão Geral
-O jogo **Pedra, Papel, Tesoura, Lagarto, Spock**é uma versão expandida e moderna do clássico jogo Pedra, Papel e Tesoura (jokenpô).
+O jogo **Pedra, Papel, Tesoura, Lagarto, Spock** é uma versão expandida e moderna do clássico jogo Pedra, Papel e Tesoura (jokenpô).
 Essa versão adiciona duas novas opções: Lagarto 🦎 e Spock 🖖, tornando o jogo mais estratégico e divertido.
 ## Sobre do Jogo
 ### 🎯 Objetivo
