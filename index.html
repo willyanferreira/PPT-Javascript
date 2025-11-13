@@ -14,7 +14,13 @@
 
 <body>
     <main>
-        <h1>Pedra Papel Tesoura</h1>
+        <h1>Pedra, Papel, Tesoura, Lagarto, Spock.</h1>
+        <section id="placar">
+            <div>Vitórias: <span id="vitorias">0</span></div>
+            <div>Derrotas: <span id="derrotas">0</span></div>
+            <div>Empates: <span id="empates">0</span></div>
+            <div>Total: <span id="total">0</span></div>
+        </section>
         <section class="container">
             <section id="areaDoUsuario">
                 <h2>Escolha sua opção</h2>
@@ -31,7 +37,16 @@
                         <input type="radio" id="tesoura" name="ppt" value="tesoura" required>
                         <i class="fa-regular fa-hand-scissors"></i>
                     </label>
+                    <label for="lagarto">
+                        <input type="radio" id="lagarto" name="ppt" value="lagarto" required>
+                        <i class="fa-regular fa-hand-lizard"></i>
+                    </label>
+                    <label for="spock">
+                        <input type="radio" id="spock" name="ppt" value="spock" required>
+                        <i class="fa-regular fa-hand-spock"></i>
+                    </label>
                 </section>
+
                 <button type="button" id="iniciarPartida">Jogar</button>
             </section>
             <section id="exibirResultado"></section>
